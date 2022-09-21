@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <title>Squash the Fly Game</title>
+  </head>
+  <body onresize="ajuste()">
+    <div class="panel">
+      <div class="life">
+        <img id="v1" src="images/diamond_full.png" alt="" />
+        <img id="v2" src="images/diamond_full.png" alt="" />
+        <img id="v3" src="images/diamond_full.png" alt="" />
+      </div>
+      <div class="timer">Time Left: <span id="timer"> </span></div>
+    </div>
+    <script>
+      document.getElementById("timer").innerHTML = time;
+      var createFly = setInterval(function() {
+        randomposition();
+      }, createFlyTime);
+    </script>
+  </body>
+</html>
